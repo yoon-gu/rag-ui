@@ -20,4 +20,5 @@ with gr.Blocks() as demo:
     query.submit(echo, [query, index, start_year, end_year], [output])
     
 demo.queue()
-demo.launch()
+if __name__ == "__main__":
+    demo.launch()

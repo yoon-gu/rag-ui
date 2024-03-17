@@ -59,4 +59,5 @@ with gr.Blocks() as demo:
         return values
     folder.upload(update_docs, folder, docs)
 
-demo.launch()
+if __name__ == "__main__":
+    demo.launch()

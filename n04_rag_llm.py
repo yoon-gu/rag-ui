@@ -27,4 +27,5 @@ with gr.Blocks() as demo:
     query.submit(echo, [query, chatbot], [query, chatbot])
     
 demo.queue()
-demo.launch()
+if __name__ == "__main__":
+    demo.launch()
