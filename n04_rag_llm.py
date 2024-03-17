@@ -6,6 +6,9 @@ with gr.Blocks() as demo:
     with gr.Row():
         query = gr.Textbox(label="사용자 질문", scale=4)
         index = gr.Dropdown(["index1", "index2"], label="Index", value="index1")
+    with gr.Row():
+        examples = gr.Examples(["RAG는 누가 만들어서 이렇게 날 힘들게 해?", "LLM은 왜 이렇게 자주 나와서 나를 힘들게 해?", "RAG와 LLM은 누가 만들었어?"],
+                                inputs=[query])
     with gr.Accordion(open=False, label="Further Results"):
         with gr.Row():
             with gr.Column():
